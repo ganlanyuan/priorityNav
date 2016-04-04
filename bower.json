@@ -1,0 +1,14 @@
+{
+  "name": "priorityNav",
+  "homepage": "https://github.com/ganlanyuan/priorityNav",
+  "authors": [
+    "William <ganlanyuan@gmail.com>"
+  ],
+  "description": "",
+  "main": "/dist/",
+  "moduleType": [],
+  "keywords": [
+    "priority-nav"
+  ],
+  "license": "MIT"
+}
