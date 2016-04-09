@@ -1,6 +1,7 @@
 /**
   * priorityNav 
   * 
+  * v0.0.0
   * @author William Lin
   * @license The MIT License (MIT)
   * https://github.com/ganlanyuan/priorityNav
