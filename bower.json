@@ -4,8 +4,13 @@
   "authors": [
     "William <ganlanyuan@gmail.com>"
   ],
-  "description": "",
-  "main": "/dist/",
+  "description": "Dynamically show / hide menu items to make them fit their parent.",
+  "main": [
+    "/dist/priority-nav.css",
+    "/dist/priorityNav.js",
+    "/dist/priorityNav.helper.js",
+    "/dist/priorityNav.helper.ie8.js",
+  ],
   "moduleType": [],
   "keywords": [
     "priority-nav"

@@ -1,6 +1,10 @@
 /**
   * priorityNav 
   * 
+  * @author William Lin
+  * @license The MIT License (MIT)
+  * https://github.com/ganlanyuan/priorityNav
+  *
   * DEPENDENCIES:
   *
   * == IE8 ==
@@ -28,32 +32,27 @@
   'use strict';
 
   function priorityNav (options) {
-    var navEls = document.querySelectorAll(options.nav);
-
-    if (navEls.length === 0) { 
-      console.log('"' + options.nav + '" can\'t be found.'); 
-      return;
-    }
-
-    for (var i = navEls.length; i--;) {
-      var newOptions = options;
-      newOptions.nav = navEls[i];
-
-      var a = new PriorityNavCore(newOptions);
-    }
-
-  }
-
-  function PriorityNavCore(options) {
     options = gn.extend({
-      nav: document.querySelector('.priority-nav'),
+      nav: '.priority-nav',
       button: 'more',
       showAll: 0,
       hideAll: 0,
     }, options || {});
 
-    var 
-        nav = options.nav,
+    var navEls = document.querySelectorAll(options.nav);
+    if (navEls.length === 0) { return; }
+
+    for (var i = navEls.length; i--;) {
+      var newOptions = options;
+      newOptions.nav = navEls[i];
+
+      return new PriorityNavCore(newOptions);
+    }
+
+  }
+
+  function PriorityNavCore(options) {
+    var nav = options.nav,
         visibleContainer = nav.querySelector('ul'),
         visibleItems = visibleContainer.children,
         hiddenContainer,
