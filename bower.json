@@ -1,6 +1,6 @@
 {
   "name": "priorityNav",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "homepage": "https://github.com/ganlanyuan/priorityNav",
   "authors": [
     "William <ganlanyuan@gmail.com>"
@@ -10,7 +10,7 @@
     "/dist/priority-nav.css",
     "/dist/priorityNav.js",
     "/dist/priorityNav.helper.js",
-    "/dist/priorityNav.helper.ie8.js",
+    "/dist/priorityNav.helper.ie8.js"
   ],
   "moduleType": [],
   "keywords": [

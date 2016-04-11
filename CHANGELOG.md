@@ -1,5 +1,8 @@
 ## Change log
 
+#### v0.0.1
+- Fixed: a `bower.json` syntax issue.
+
 #### v0.0.0
 - Works well with `NodeList`.
 - Added: breakpoints to show / hide all menu items.

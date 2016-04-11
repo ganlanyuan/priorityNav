@@ -1,5 +1,5 @@
 ## PriorityNav
-![version](https://img.shields.io/badge/Version-0.0.0-blue.svg)  
+![version](https://img.shields.io/badge/Version-0.0.1-blue.svg)  
 Dynamically show / hide menu items to make them fit their parent.
 
 [demo](http://creatiointl.org/gallery/william/priority-nav/v0/tests/)  
