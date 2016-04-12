@@ -1,5 +1,5 @@
 ## PriorityNav
-![version](https://img.shields.io/badge/Version-0.0.1-blue.svg)  
+![version](https://img.shields.io/badge/Version-0.1.0-blue.svg)  
 Dynamically show / hide menu items to make them fit their parent.
 
 [demo](http://creatiointl.org/gallery/william/priority-nav/v0/tests/)  
@@ -12,7 +12,16 @@ bower install priorityNav --save
 
 ## Usage
 ##### 1. Include priorityNav
-Include priorityNav (css, js) and [go-native](https://github.com/ganlanyuan/go-native) (10k),
+Include priorityNav (css, js) 
+```html
+<link rel="stylesheet" href="priorityNav.css">
+
+<!--[if (lt IE 9)]>
+  <script src="priorityNav-helper.ie8.js"></script>
+<![endif]-->
+<script src="priorityNav.js"></script>
+```
+or priorityNav.native (css, js) and [go-native](https://github.com/ganlanyuan/go-native) (10k).
 ```html
 <link rel="stylesheet" href="priorityNav.css">
 
@@ -20,17 +29,7 @@ Include priorityNav (css, js) and [go-native](https://github.com/ganlanyuan/go-n
   <script src="go-native.ie8.js"></script>
 <![endif]-->
 <script src="go-native.js"></script>
-<script src="priorityNav.js"></script>
-```
-or priorityNav (css, js) and [priorityNav.helper](https://github.com/ganlanyuan/priorityNav/tree/master/dist) (6k).
-```html
-<link rel="stylesheet" href="priorityNav.css">
-
-<!--[if (lt IE 9)]>
-  <script src="priorityNav.helper.ie8.js"></script>
-<![endif]-->
-<script src="priorityNav.helper.js"></script>
-<script src="priorityNav.js"></script>
+<script src="priorityNav.native.js"></script>
 ```
 ##### 2. Call priorityNav
 Add class **.priority-nav** to nav container, Or include priority-nav if you use [SASS](http://sass-lang.com/):

@@ -1,6 +1,6 @@
 {
   "name": "priorityNav",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "homepage": "https://github.com/ganlanyuan/priorityNav",
   "authors": [
     "William <ganlanyuan@gmail.com>"
@@ -8,13 +8,15 @@
   "description": "Dynamically show / hide menu items to make them fit their parent.",
   "main": [
     "/dist/priority-nav.css",
-    "/dist/priorityNav.js",
-    "/dist/priorityNav.helper.js",
-    "/dist/priorityNav.helper.ie8.js"
+    "/dist/priorityNav.js"
   ],
   "moduleType": [],
   "keywords": [
     "priority-nav"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "go-native": "^0.1.0"
+  }
 }
