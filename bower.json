@@ -17,6 +17,6 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "go-native": "^0.1.0"
+    "go-native": "0.0.2"
   }
 }
