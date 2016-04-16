@@ -38,16 +38,18 @@ var priorityNav = (function () {
       hideAll: 0,
     }, options || {});
 
-    var navEls = document.querySelectorAll(options.nav);
+    var navEls = document.querySelectorAll(options.nav),
+        arr = [];
     if (navEls.length === 0) { return; }
 
     for (var i = navEls.length; i--;) {
       var newOptions = options;
       newOptions.nav = navEls[i];
 
-      return new Core(newOptions);
+      var a = new Core(newOptions);
+      arr.unshift(a);
     }
-
+    return arr;
   }
 
   function Core(options) {
@@ -66,6 +68,7 @@ var priorityNav = (function () {
     this.nav.classList.add('js-priority-nav');
 
     // run updateNav
+    this.getBreakpoints();
     this.updateNav();
     
     var scope = this;
@@ -93,16 +96,24 @@ var priorityNav = (function () {
       });
 
       this.initialized = true;
-      this.getBreakpoints();
     },
 
     // destory
     destory: function () {
-      this.nav.classList.remove('js-priority-nav');
-      this.visibleContainer.classList.remove('js-nav-visible');
-      this.hiddenContainer.remove();
-      this.btn.remove();
-      this.initialized = false;
+      if (this.initialized) {
+        if (this.bpH.length > 0) {
+          while(this.bpH.length > 0) { 
+            this.appendItemsToFragment(); 
+          }
+          this.visibleContainer.appendChild(this.fragment);
+        }
+
+        this.nav.classList.remove('js-priority-nav');
+        this.visibleContainer.classList.remove('js-nav-visible');
+        this.hiddenContainer.remove();
+        this.btn.remove();
+        this.initialized = false;
+      }
     },
     
     // get breakpoints
@@ -143,18 +154,7 @@ var priorityNav = (function () {
       this.outerWidth = gn.getOuterWidth(this.nav);
 
       if (this.outerWidth >= this.bp[this.bp.length - 1] || this.windowWidth < this.showAll) {
-
-        if (this.initialized) {
-          if (this.bpH.length > 0) {
-            while(this.bpH.length > 0) { 
-              this.appendItemsToFragment(); 
-            }
-            this.visibleContainer.appendChild(this.fragment);
-          }
-
-          this.destory();
-        }
-
+        this.destory();
       } else {
         if (!this.initialized) { this.init(); }
 
@@ -193,7 +193,7 @@ var priorityNav = (function () {
       }
 
     }
-  }
+  };
 
   return priorityNav;
 })();
