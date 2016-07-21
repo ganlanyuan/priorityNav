@@ -8,13 +8,13 @@
     clear: both;
     display: table;
   }
-  ul { 
+  > ul { 
     max-width: 100%;
     overflow-x: auto; 
-  }
-  li { 
-    display: table-cell; 
-    white-space: nowrap;
+    > li { 
+      display: table-cell; 
+      white-space: nowrap;
+    }
   }
   .is-hidden { visibility: hidden; }
   
